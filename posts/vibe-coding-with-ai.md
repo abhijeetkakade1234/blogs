@@ -1,6 +1,6 @@
 ---
 title: "The Chaos of Vibe Coding: Automation Without Guardrails"
-date: "2026-02-16"
+date: "2026-02-17"
 author: "Abhijeet Kakade"
 description: "A story about letting AI handle deployment, 39 failed builds, and the importance of CI/CD."
 ---
@@ -19,7 +19,7 @@ Then I handed it to the AI agent and told it to keep track of everything and onl
 The UI turned out really cool.
 Everything worked fine.
 APIs worked.
-Tested it—results were solid.
+Tested it results were solid.
 
 ## The Deployment Disaster
 
