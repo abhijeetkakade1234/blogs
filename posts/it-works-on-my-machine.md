@@ -22,7 +22,21 @@ Checked the Git history did someone change anything? 🤔
 Nope.
 
 Then finally, I checked the database.
-And yep… there was one small schema difference that made all of us panic a column that was nullable locally wasn’t updated the same way in the dev DB.
+wasn’t updated the same way in the dev DB.
+
+```sql
+-- Local DB (Works)
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  phone_number VARCHAR(15) NULL  -- ✅ Nullable
+);
+
+-- Dev DB (Fails)
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  phone_number VARCHAR(15) NOT NULL -- ❌ Strict!
+);
+```
 
 Later, my senior (a Principal Engineer) gave us a tip:
 > “If it works perfectly on your local environment but fails in another environment and the code is the same, high chances the culprit is the database or environment differences.”

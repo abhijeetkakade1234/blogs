@@ -34,6 +34,23 @@ Out of those, only **5 builds were successful**.
 It would push the code to GitHub → Cloudflare auto-build → build failed → logs generated → AI modified code → pushed again.
 And the loop continued.
 
+```bash
+> git push origin main
+...
+remote: Building... 
+remote: ❌ Build failed. Error: Module not found.
+> AI: "Fixing import paths..."
+> git push origin main
+...
+remote: Building...
+remote: ❌ Build failed. Error: Type mismatch.
+> AI: "Adjusting types..."
+> git push origin main
+...
+remote: Building...
+remote: ❌ Build failed. Error: I don't even know anymore.
+```
+
 I even asked it how many attempts it had made.
 At some point, I could clearly see it was struggling, yet it kept trying.
 Yes, it’s just an algorithm. But I noticed something interesting.
