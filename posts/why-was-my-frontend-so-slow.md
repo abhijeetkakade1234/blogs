@@ -26,7 +26,7 @@ And for days I tried to fix it.
 
 Tried many things.  
 Asked every AI I knew.  
-Went to Stack Overflow, Reddit, GitHub, YouTube — searching for answers like I was trying to find the Infinity Stones.
+Went to Stack Overflow, Reddit, GitHub, YouTube searching for answers like I was trying to find the Infinity Stones.
 
 I never even looked at the backend.
 
@@ -82,7 +82,7 @@ It was excessive logging + blocking backend work.
 The thing that helps you debug in development
 can hurt you in production.
 
-Heavy console logging inside long-running jobs can:
+Heavy console logging inside long running jobs can:
 
 - Slow down request handling
 - Block threads
