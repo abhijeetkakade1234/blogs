@@ -2,7 +2,7 @@
 title: "The Case of the Missing Production Images 👻"
 date: "2026-03-19"
 author: "Abhijeet Kakade"
-description: "A small TypeScript import mistake that only broke in production — and what it taught me."
+description: "A small TypeScript import mistake that only broke in production and what it taught me."
 ---
 
 # It Worked in Dev… Until It Didn’t 😅
