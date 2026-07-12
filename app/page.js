@@ -6,7 +6,7 @@ export default function Home() {
   const allPostsData = getAllPosts();
 
   return (
-    <main className="min-h-screen bg-background text-foreground antialiased selection:bg-accent-pink/30 selection:text-white">
+    <main className="min-h-screen bg-transparent text-foreground antialiased selection:bg-accent-pink/30 selection:text-white">
       <Hero />
       
       <section className="container mx-auto px-6 pb-20 max-w-5xl">

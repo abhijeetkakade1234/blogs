@@ -21,7 +21,7 @@ export default async function Post({ params }) {
   const postData = await getPostBySlug(slug);
 
   return (
-    <article className="min-h-screen bg-background text-foreground selection:bg-accent-pink/30 selection:text-white pb-32">
+    <article className="min-h-screen bg-transparent text-foreground selection:bg-accent-pink/30 selection:text-white pb-32">
        <div className="container mx-auto px-6 pt-12 md:pt-20 max-w-3xl">
          {/* Navigation */}
          <nav className="mb-12">
