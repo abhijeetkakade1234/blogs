@@ -2,174 +2,213 @@
 title: "The Hardest Lesson I Learned: Nobody Owes Your Product Their Time"
 date: "2026-07-16"
 author: "Abhijeet Kakade"
-description: "Avaxverse taught me how to build software. Breaking Ice taught me why people use software."
+description: "I thought building more features made a better product. One project proved me wrong."
 ---
+
+# The Hardest Lesson I Learned: Nobody Owes Your Product Their Time
 
 I used to think more features meant a better product.
 
 I was wrong.
 
-For a long time I treated building like a technical challenge.
-If I could add more features, make the UI cleaner, improve the architecture, and ship something that looked impressive, I assumed the product would automatically matter.
+For a long time, building software felt like a technical challenge.
 
-That belief stayed with me way longer than it should have.
+If I could make the UI cleaner, add more features, improve the architecture, and keep polishing it every day, I believed people would naturally want to use it.
 
-Then two projects hit me with the same question from completely different directions.
+That sounds obvious now.
 
-One was [Avaxverse](https://avaxverse.vercel.app).
-The other was [Breaking Ice](https://breaking-ice.pages.dev).
+Back then, it didn't.
 
-And both taught me something very different.
+---
 
-## Avaxverse: the better app that still lost
+## I kept building...
 
-I was genuinely excited while building Avaxverse.
+One day I decided to participate in Avalanche Build Games.
 
-It started as a Build Games entry, and I attacked it with the exact mindset I used to admire in myself.
+I started building **Avaxverse**.
 
-- More features
-- Better architecture
+At first it was just another hackathon project.
+
+Then it slowly became something much bigger.
+
+Every day I found something to improve.
+
 - Better UI
 - Better animations
-- Better Web3 integrations
+- More features
+- Better architecture
+- More Web3 integrations
 
-Every day felt productive because there was always something more to improve.
+Every improvement made me feel productive.
 
-And to be fair, it was good work.
+And honestly...
 
-It even reached Stage 2.
-A YC founder friend complimented the UI.
-I was proud of it, and honestly I had reason to be.
+I loved it.
 
-But eventually the uncomfortable question showed up.
+The project kept getting better.
+
+It even reached **Stage 2** of Build Games.
+
+A YC founder friend looked at it and told me,
+
+> "This UI is really good. It doesn't even feel vibe coded."
+
+That made me incredibly proud.
+
+For a while I genuinely believed I was building something amazing.
+
+---
+
+## Then one question ruined everything.
+
+One day I stopped looking at the code.
+
+Instead I asked myself...
 
 > Who is actually going to use this?
 
-I did not have a real answer.
+I couldn't answer.
 
-That silence mattered more than every feature I had added.
+That silence hurt more than any bug.
 
-Because the truth was simple...
-I had built for judges, not users.
+Because I realized something.
 
-I kept improving something nobody had asked for.
+I had spent weeks making the product better...
 
-That line still stings a little because it exposes the exact trap.
-When nobody is waiting for the thing you're polishing, progress can feel real without actually being useful.
+without knowing who actually needed it.
 
-Avaxverse was not a failure in the sense that I learned nothing from it.
-It taught me a lot about shipping, design, integration work, and how to make software feel polished.
+I wasn't building for users.
 
-But it also taught me that polish does not create demand.
-I even pitched it at Avalanche Team1 City Connect Nashik.
+I was building for judges.
+
+I even presented it at Avalanche Team1 City Connect Nashik.
 
 ![Pitching Avaxverse at Avalanche Team1 City Connect Nashik](/pitch.jpeg)
 
-And still it did not work.
-Because no one was really going to use it.
-There was no real demand.
-I had not answered the most important question...
-why should people use this in the first place?
+People appreciated the project.
 
-## Breaking Ice: smaller idea, stronger reason
+People appreciated the UI.
 
-Breaking Ice came from a completely different place.
+People appreciated the effort.
 
-This time I was not asking:
+But appreciation isn't usage.
 
-> What's the coolest thing I can build?
+Nobody woke up thinking,
 
-I was asking:
+"I need Avaxverse today."
 
-> What's the smallest thing that solves one real problem?
+That was the moment everything changed.
 
-That shift changed everything.
+---
 
-I had felt the problem myself.
-I knew other people had it too.
-So instead of building outward from ideas, I built inward from pain.
+## The next project was completely different.
 
-There was no need for crazy architecture.
-No need for dozens of features.
-No need to overengineer the first version.
-
-Just enough to solve something real.
-
-So I shipped.
-
-And people used it.
-
-Not hypothetical users.
-Real people.
-From different countries.
-
-That changed the emotional feedback loop of building.
-Suddenly the question was not whether the feature list looked impressive.
-The question was whether the product was helping someone do something they already wanted to do.
-
-That is a much better question.
-
-## What changed was not my coding
-
-From the outside it is easy to point at outcomes.
-
-Breaking Ice reached Stage 3 of Polaris Fellowship.
-It led to interviews.
-It put me in rooms with YC founders.
-
-But those things were not the point.
-They were the consequence.
-
-The real shift was not in code quality.
-It was in the question I started with.
-
-Before, I used to ask:
+After that, I stopped asking,
 
 > What else can I build?
 
-Now I ask:
+Instead I asked,
+
+> What problem do I personally have?
+
+That question became **Breaking Ice**.
+
+This time I didn't care about making the biggest project.
+
+I cared about solving one small problem properly.
+
+The architecture was much simpler.
+
+The feature list was much shorter.
+
+The UI wasn't something I was proud of.
+
+I shipped it much faster.
+
+And then...
+
+People actually started using it.
+
+Not judges.
+
+Not friends.
+
+Real users from different countries.
+
+That feeling was completely different.
+
+For the first time, I wasn't excited because I had built something impressive.
+
+I was excited because someone found it useful.
+
+---
+
+## That changed how I think.
+
+Breaking Ice reached Stage 3 of the Polaris Fellowship.
+
+It opened interview opportunities.
+
+It introduced me to YC-backed founders.
+
+But those weren't the real wins.
+
+Those were just the results.
+
+The real win was changing the question I ask before writing a single line of code.
+
+Before, I used to ask,
+
+> What else can I build?
+
+Now I ask,
 
 > Why should someone care?
 
-That is the difference between building for validation and building for usefulness.
+That single question has saved me from building things nobody wants.
 
-It is also the difference between acting like an engineer collecting completed tasks and acting like a builder trying to earn attention.
+---
 
-## Nobody owes your product their time
+## Nobody owes your product their time.
 
-This is the hardest lesson because it attacks a very comforting illusion.
+This is probably the hardest lesson I've learned so far.
 
-You can work hard on something.
-You can make it beautiful.
-You can make it technically better than alternatives.
-And none of that guarantees anyone will care.
+People don't care how beautiful your architecture is.
 
-Users are not judges handing out points for effort.
-They are not obligated to reward good architecture.
-They do not owe your product a chance just because you spent nights building it.
+They don't care how many weekends you worked.
 
-If the problem is weak, the product will be weak no matter how polished it is.
+They don't care how polished your animations are.
 
-That sounds harsh, but it is actually freeing.
+They only care if your product makes their life a little easier.
 
-Because once you accept it, you stop wasting energy perfecting things in search of meaning.
-You start looking for meaning first.
+That's it.
 
-## The lesson I want to keep
+Once I accepted that, building became much simpler.
+
+Now I spend less time asking,
+
+> "What feature should I add next?"
+
+and more time asking,
+
+> "Should this feature exist at all?"
+
+---
+
+## The lesson I want to remember
 
 Avaxverse taught me how to build software.
 
 Breaking Ice taught me why people use software.
 
-Both mattered.
-But only one of those lessons changed how I think.
+I wouldn't remove either project from my journey.
 
-Shipping something useful beats perfecting something nobody needs.
+Without the first one, I would never have understood the second.
 
-That is the mindset shift I wish I had earlier, and the one I want to keep from now on.
+Shipping something useful will always matter more than perfecting something nobody needs.
 
-Even if I end up being a failed founder, I am still a founder.
+Even if I end up becoming a failed founder one day...
 
-And I know this much for sure...
+I'll still be a founder.
 
-More launches will be coming soon.
+And I'm just getting started.
