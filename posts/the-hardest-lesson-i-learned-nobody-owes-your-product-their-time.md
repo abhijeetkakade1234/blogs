@@ -5,8 +5,6 @@ author: "Abhijeet Kakade"
 description: "I thought building more features made a better product. One project proved me wrong."
 ---
 
-# The Hardest Lesson I Learned: Nobody Owes Your Product Their Time
-
 I used to think more features meant a better product.
 
 I was wrong.
