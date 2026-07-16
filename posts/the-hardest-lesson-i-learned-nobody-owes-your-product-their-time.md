@@ -23,7 +23,7 @@ Back then, it didn't.
 
 One day I decided to participate in Avalanche Build Games.
 
-I started building **Avaxverse**.
+I started building [**Avaxverse**](https://avaxverse.vercel.app).
 
 At first it was just another hackathon project.
 
