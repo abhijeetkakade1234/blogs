@@ -109,7 +109,7 @@ Instead I asked,
 
 > What problem do I personally have?
 
-That question became **Breaking Ice**.
+That question became [**Breaking Ice**](https://breaking-ice.pages.dev).
 
 This time I didn't care about making the biggest project.
 
