@@ -15,7 +15,7 @@ If I could make the UI cleaner, add more features, improve the architecture, and
 
 That sounds obvious now.
 
-Back then, it didn't.
+Back then, it didn't....
 
 ---
 
@@ -53,7 +53,7 @@ A YC founder friend looked at it and told me,
 
 That made me incredibly proud.
 
-For a while I genuinely believed I was building something amazing.
+For a while I genuinely believed I was building something amazing....
 
 ---
 
@@ -67,7 +67,7 @@ Instead I asked myself...
 
 I couldn't answer.
 
-That silence hurt more than any bug.
+That silence hurt more than any bug....
 
 Because I realized something.
 
@@ -99,71 +99,89 @@ That was the moment everything changed.
 
 ---
 
-## The next project was completely different.
+## The next project wasn't another hackathon.
 
-After that, I stopped asking,
+After Avaxverse, I made myself a promise.
 
-> What else can I build?
+I wouldn't start another project just because I thought it sounded cool.
 
-Instead I asked,
+I wanted to solve a real problem.
+
+So before opening my code editor, I asked myself one simple question.
 
 > What problem do I personally have?
 
-That question became [**Breaking Ice**](https://breaking-ice.pages.dev).
+That question completely changed the way I build.
 
-This time I didn't care about making the biggest project.
+Instead of looking for ideas online, I started paying attention to the small frustrations in my own life.
 
-I cared about solving one small problem properly.
+It turns out those frustrations are often shared by other people too.
 
-The architecture was much simpler.
+That became the foundation for my next project.
 
-The feature list was much shorter.
+The project itself isn't the important part of this story.
 
-The UI wasn't something I was proud of.
+The mindset behind it is.
 
-I shipped it much faster.
+For the first time, I wasn't trying to impress judges.
 
-And then...
+I wasn't trying to build the biggest app.
 
-People actually started using it.
+I wasn't trying to create the longest feature list.
 
-Not judges.
+I was simply trying to solve one problem well.
 
-Not friends.
+That single change made every decision easier.
 
-Real users from different countries.
+Features stopped being trophies.
 
-That feeling was completely different.
+They had to earn their place.
 
-For the first time, I wasn't excited because I had built something impressive.
+If a feature didn't help solve the original problem, it didn't get built.
 
-I was excited because someone found it useful.
+The architecture became simpler.
+
+The scope became smaller.
+
+The product shipped much faster.
+
+More importantly...
+
+People actually wanted to use it.
+
+That felt completely different from shipping something technically impressive.
+
+Because this time, the excitement didn't come from building.
+
+It came from seeing that something I made was genuinely useful to someone else.
 
 ---
 
 ## That changed how I think.
 
-Breaking Ice reached Stage 3 of the Polaris Fellowship.
+Looking back, the biggest change wasn't in my coding skills.
 
-It opened interview opportunities.
+It was in the questions I asked before writing a single line of code.
 
-It introduced me to YC-backed founders.
-
-But those weren't the real wins.
-
-Those were just the results.
-
-The real win was changing the question I ask before writing a single line of code.
-
-Before, I used to ask,
+Before, my first thought was,
 
 > What else can I build?
 
-Now I ask,
+Now it's,
 
 > Why should someone care?
 
-That single question has saved me from building things nobody wants.
+That one question filters almost every idea I have.
+
+It reminds me that users don't reward effort.
+
+They reward usefulness.
+
+The opportunities that came afterwards, interviews, founder conversations, hackathons, all happened because I finally had a product with a clear story behind it.
+
+Not because it had the most features.
+
+Because it solved a real problem.
 
 ---
 
@@ -197,16 +215,18 @@ and more time asking,
 
 Avaxverse taught me how to build software.
 
-Breaking Ice taught me why people use software.
+My next project taught me why people use software.
 
-I wouldn't remove either project from my journey.
+I wouldn't remove either from my journey.
 
 Without the first one, I would never have understood the second.
 
 Shipping something useful will always matter more than perfecting something nobody needs.
 
-Even if I end up becoming a failed founder one day...
+Even if one day every product I build fails....
 
-I'll still be a founder.
+I'll still call myself a founder.
 
-And I'm just getting started.
+Because being a founder was never about having one successful product.
+
+It was about choosing to build again.
