@@ -1,30 +1,15 @@
 import Link from 'next/link';
 
-export default function PostCard({ post }) {
-  return (
-    <Link href={`/posts/${post.slug}`} className="block group">
-      <div className="h-full bg-card-bg rounded-lg border border-card-border p-6 transition-all duration-300 hover:-translate-y-1 hover:brightness-110 hover:border-accent-pink/40">
-        <div className="flex flex-col h-full">
-           <div className="mb-4">
-              <h2 className="text-2xl font-semibold text-foreground group-hover:text-white transition-colors mb-2">
-                {post.title}
-              </h2>
-              <div className="flex items-center gap-3 text-sm text-muted font-medium">
-                <span>{post.date}</span>
-                <span className="w-1 h-1 rounded-full bg-card-border"></span>
-                <span>{post.author}</span>
-              </div>
-           </div>
-           
-           <p className="text-muted/80 leading-relaxed mb-6 flex-grow">
-             {post.description}
-           </p>
+const drawings = [<><path fill="#7b93a8" d="M21 55C19 30 38 15 61 23c7 3 10 10 10 18 12-5 24 4 21 16-7 24-39 35-71 20z" /><path fill="#c96442" d="M45 29c6 12 5 26-4 39" /></>, <><path fill="#8a9a5b" d="M26 65c-9-29 3-49 23-53 17 13 17 38 1 54z" /><path fill="#c9a227" d="M58 68c-7-24 3-42 22-47 14 14 10 36-6 50z" /><path fill="#c96442" d="M34 76c18-22 31-36 46-49" /></>, <><path fill="#c9a227" d="M20 58 44 18l18 18 20-15 13 45-39 13z" /><path fill="#7b93a8" d="m50 40 15 15-16 16-15-15z" /></>, <><path fill="#c96442" d="M19 60c5-30 28-47 54-39 20 6 23 28 10 46-22 10-45 2-64-7z" /><path fill="#8a9a5b" d="M49 20c-2 23 4 38 18 50" /></>, <><path fill="#7b93a8" d="M18 47c16-25 43-31 62-13 12 12 6 35-10 45-23 3-43-10-52-30z" /><path fill="#c9a227" d="M39 44h34v25H39z" /></>, <><path fill="#8a9a5b" d="M22 70c-2-37 19-57 45-57 15 20 6 51-18 65z" /><path fill="#c96442" d="M68 74c-9-22-5-43 13-53 15 16 10 39-4 53z" /></>];
 
-           <div className="flex items-center text-accent-pink text-sm font-medium opacity-80 group-hover:opacity-100 transition-opacity">
-              Read article <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
-           </div>
-        </div>
-      </div>
-    </Link>
-  );
+function MiniIllustration({ variant }) {
+  return <svg viewBox="0 0 110 100" className="h-24 w-28 shrink-0 md:h-28 md:w-32" role="img" aria-label="Abstract editorial illustration"><defs><filter id={`rough-${variant}`}><feTurbulence type="fractalNoise" baseFrequency=".025" numOctaves="2" seed={variant + 2} result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /></filter></defs><g filter={`url(#rough-${variant})`} stroke="#1a1815" strokeWidth="3.5" strokeLinejoin="round">{drawings[variant % drawings.length]}</g></svg>;
+}
+
+function FeatureIllustration() {
+  return <svg viewBox="0 0 420 230" className="h-auto w-full max-w-sm" role="img" aria-label="Two speech bubbles crossing paths"><defs><filter id="feature-rough"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="2" seed="13" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /></filter></defs><g filter="url(#feature-rough)" stroke="#1a1815" strokeWidth="4" strokeLinejoin="round"><path fill="#7b93a8" d="M48 65c11-36 52-52 90-34 27 13 31 49 8 73-22 22-58 22-87 5l-36 17 16-34c-3-9 0-18 9-27z" /><path fill="#c96442" d="M230 117c18-32 60-37 90-14 22 17 20 52-2 71-24 20-59 15-79-7l-37 7 19-30c-4-9-1-18 9-27z" /><path fill="#8a9a5b" d="M155 207c-16-34-9-65 19-85 21 28 18 61-5 86z" /><path fill="#c9a227" d="M298 205c-5-33 11-59 42-68 10 31-4 57-31 71z" /></g><path d="M96 83h28M253 138h29" stroke="#1a1815" strokeWidth="4" strokeLinecap="round" /></svg>;
+}
+
+export default function PostCard({ post, featured = false, variant = 0 }) {
+  return <article className={featured ? 'pb-4 md:pb-0' : 'border-b site-rule py-7 first:pt-0'}><div className="flex gap-4"><div className="min-w-0 flex-1"><p className="mb-3 text-sm text-[var(--muted)]">{post.date}</p><Link href={`/posts/${post.slug}`} className="group block"><h2 className={`editorial-serif font-bold leading-[1.05] tracking-[-.035em] transition-colors group-hover:text-[var(--terracotta)] ${featured ? 'text-4xl sm:text-5xl' : 'text-2xl sm:text-3xl'}`}>{post.title}</h2><p className="mt-3 max-w-xl leading-relaxed text-[#4b443b]">{post.description}</p><span className="mt-5 inline-block text-sm font-bold underline decoration-1 underline-offset-4 group-hover:text-[var(--terracotta)]">Read article <span aria-hidden="true">→</span></span></Link></div>{!featured && <MiniIllustration variant={variant} />}</div>{featured && <div className="mt-12 flex justify-center border-t site-rule pt-9 md:mt-16"><FeatureIllustration /></div>}</article>;
 }

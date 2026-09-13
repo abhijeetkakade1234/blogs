@@ -1,15 +1,9 @@
-export default function Hero() {
-  return (
-    <section className="w-full pt-32 pb-16 bg-transparent">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground tracking-tight leading-tight">
-          Welcome to <span className="border-b-4 border-accent-pink/60 pb-1">Abhi&apos;s Blog</span>
-        </h1>
-        <p className="text-xl text-muted max-w-2xl font-light leading-relaxed">
-          A space for minimal thoughts, code snippets, and ideas. 
-          Explored with <span className="text-accent-pink">curiosity</span>.
-        </p>
-      </div>
-    </section>
-  );
+import Link from 'next/link';
+
+function NotebookIllustration() {
+  return <svg viewBox="0 0 560 390" className="h-auto w-full max-w-[34rem]" role="img" aria-label="A hand holding a notebook and pencil"><defs><filter id="handDrawn"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" /></filter></defs><g filter="url(#handDrawn)" stroke="#1a1815" strokeWidth="4" strokeLinejoin="round"><path fill="#7b93a8" d="M104 177c-50-44-61-77-42-103 27 10 52 42 55 72 2-40 15-71 42-88 17 37 10 77-27 117z" /><path fill="#8a9a5b" d="M86 270c30-54 65-77 111-84l17 81c-44 26-84 34-128 3z" /><path fill="#d97757" d="M162 341c9-78 41-129 83-143 17-6 26 15 16 35 31-22 50-10 38 16 24-8 35 10 20 29-29 35-67 62-116 82z" /><path fill="#e3dacc" d="M241 63l182-32c18-3 29 4 33 20l42 204c3 16-4 27-20 30l-182 34c-18 3-28-5-32-21L222 94c-3-17 3-28 19-31z" /><path fill="#8a9a5b" d="M261 84l145-26 37 188-145 27z" /><path fill="#c9a227" d="M454 276l28-171 19 3-28 172z" /><path fill="#f5e3c7" d="M452 277l11 30 17-25z" /></g><text x="319" y="135" fill="#1a1815" fontFamily="Georgia, serif" fontSize="25" transform="rotate(-10 319 135)">ideas worth</text><text x="331" y="165" fill="#1a1815" fontFamily="Georgia, serif" fontSize="25" transform="rotate(-10 331 165)">building</text></svg>;
+}
+
+export default function Hero({ post }) {
+  return <><header className="site-shell flex items-center justify-between border-b site-rule py-5"><Link href="/" className="editorial-serif text-2xl font-bold tracking-tight sm:text-3xl">Blogs by Abhi</Link><a className="text-sm font-medium underline decoration-1 underline-offset-4 hover:text-[var(--terracotta)]" href="https://abhijeetkakade.in/">Portfolio</a></header><section className="site-shell py-7 md:py-10"><div className="paper-grain grid overflow-hidden rounded-[1.25rem] bg-[var(--featured)] md:grid-cols-[.9fr_1.1fr]"><div className="flex flex-col justify-center px-7 py-12 md:px-12 md:py-16"><p className="mb-6 text-sm font-medium text-[var(--muted)]">{post.date}</p><h1 className="editorial-serif max-w-xl text-5xl font-bold leading-[.92] tracking-[-.06em] sm:text-6xl">{post.title}</h1><p className="mt-7 max-w-md text-lg leading-relaxed text-[#39342e]">{post.description}</p><Link href={`/posts/${post.slug}`} className="mt-8 w-fit border-b-2 border-[var(--ink)] pb-1 text-sm font-bold transition-colors hover:border-[var(--terracotta)] hover:text-[var(--terracotta)]">Read the story <span aria-hidden="true">→</span></Link></div><div className="flex items-end justify-center px-5 pt-6 md:pt-10"><NotebookIllustration /></div></div></section></>;
 }

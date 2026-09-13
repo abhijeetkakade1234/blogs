@@ -1,5 +1,5 @@
-const CACHE = "blogs-v2";
-const CORE = ["/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/apple-icon.png"];
+const CACHE = "blogs-v3";
+const CORE = ["/manifest.webmanifest", "/blogs-pwa-icon.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)));

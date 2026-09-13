@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import PwaRegistrar from "./components/PwaRegistrar";
+import Butterflies from "./components/Butterflies";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,16 +25,15 @@ export const metadata = {
     title: "Blogs by Abhi",
   },
   icons: {
-    apple: "/apple-icon.png",
+    apple: "/blogs-pwa-icon.png",
     icon: [
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/blogs-pwa-icon.png", sizes: "1024x1024", type: "image/png" },
     ],
   },
 };
 
 export const viewport = {
-  themeColor: "#0f0f0f",
+  themeColor: "#F0EEE6",
 };
 
 export default function RootLayout({ children }) {
@@ -43,6 +43,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <PwaRegistrar />
+        <Butterflies />
         {children}
         <Footer />
       </body>

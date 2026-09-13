@@ -1,36 +1,15 @@
-import Link from 'next/link';
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+function SecretScene({ revealed }) {
+  return <svg viewBox="0 0 900 260" className={`absolute bottom-0 left-1/2 h-72 w-auto max-w-none -translate-x-1/2 transition-all duration-500 ease-out md:h-96 ${revealed ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`} role="img" aria-label="Hidden illustrated studio desk"><defs><filter id="footer-rough"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="2" seed="11" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /></filter></defs><g filter="url(#footer-rough)" stroke="#faf9f5" strokeWidth="4" strokeLinejoin="round"><path fill="#c96442" d="M370 228V86l59-54 16 15-44 48v133z" /><path fill="#c9a227" d="M408 38c23-27 54-33 79-18-15 24-41 32-79 18z" /><path fill="#7b93a8" d="M578 226V112h85v114z" /><path fill="#8a9a5b" d="M572 112h99l-16-50h-67z" /><path fill="#e3dacc" d="m108 226 40-98 48 23-39 75z" /><path fill="#c96442" d="M151 124c-34-21-41-52-22-75 29 9 40 35 22 75z" /><path fill="#8a9a5b" d="M177 137c-11-39 5-65 34-72 19 26 8 56-34 72z" /><path fill="#7b93a8" d="M245 226v-55h81v55z" /><path fill="#c9a227" d="M250 168v-27h80v27z" /><path fill="#c96442" d="M704 226c-9-50 15-84 55-92 23 29 12 68-25 92z" /><path fill="#8a9a5b" d="M762 225c-11-36 5-63 33-72 19 25 10 55-18 72z" /></g><path d="M0 228h900" stroke="#faf9f5" strokeWidth="4" /></svg>;
+}
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  
-  const socialLinks = [
-    { name: 'X (Twitter)', url: 'https://x.com/AbhijeetKakade0' },
-    { name: 'GitHub', url: 'https://github.com/abhijeetkakade1234' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhijeet-kakade-384a9a253/' },
-    { name: 'Portfolio', url: 'https://abhijeetkakade.in/' },
-  ];
-
-  return (
-    <footer className="border-t border-card-border mt-auto">
-      <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-muted text-sm">
-          © {currentYear} Abhijeet Kakade. All rights reserved.
-        </div>
-        
-        <div className="flex items-center gap-6">
-          {socialLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-accent-pink transition-colors text-sm font-medium"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      </div>
-    </footer>
-  );
+  const footer = useRef(null);
+  const lastScroll = useRef(0);
+  const [revealed, setRevealed] = useState(false);
+  useEffect(() => { let timer; const onScroll = () => { const currentScroll = window.scrollY; const scrollingDown = currentScroll > lastScroll.current; lastScroll.current = currentScroll; if (!scrollingDown) { clearTimeout(timer); setRevealed(false); return; } const rect = footer.current?.getBoundingClientRect(); if (!rect || rect.top > window.innerHeight || rect.bottom < 0) return; setRevealed(true); clearTimeout(timer); timer = setTimeout(() => setRevealed(false), 500); }; window.addEventListener('scroll', onScroll, { passive: true }); return () => { window.removeEventListener('scroll', onScroll); clearTimeout(timer); }; }, []);
+  return <footer ref={footer} className="relative h-[26rem] overflow-hidden bg-[var(--dark)] text-[var(--surface)] md:h-[34rem]"><div className={`site-shell relative z-10 flex h-full flex-col justify-between gap-8 py-10 transition-transform duration-500 ease-out md:flex-row md:items-end ${revealed ? '-translate-y-36' : 'translate-y-0'}`}><div><p className="editorial-serif text-3xl font-bold tracking-tight">Blogs by Abhi</p><p className="mt-2 text-xs tracking-[.18em] text-[#c8c2b7]">BUILD A KINDER, BRIGHTER INTERNET.</p></div><div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#d9d3c9]"><a className="hover:text-white" href="https://x.com/AbhijeetKakade0">X</a><a className="hover:text-white" href="https://github.com/abhijeetkakade1234">GitHub</a><a className="hover:text-white" href="https://www.linkedin.com/in/abhijeet-kakade-384a9a253/">LinkedIn</a><a className="hover:text-white" href="https://abhijeetkakade.in/">Portfolio</a></div></div><SecretScene revealed={revealed} /></footer>;
 }
