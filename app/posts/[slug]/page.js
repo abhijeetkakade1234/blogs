@@ -26,7 +26,7 @@ function PostSignature({ slug }) {
 
 export async function generateStaticParams() { return getAllSlugs(); }
 
-export async function generateMetadata({ params }) { const { slug } = await params; const postData = await getPostBySlug(slug); const title = `${postData.title} | Blogs by Abhi`; const image = `/posts/${slug}/opengraph-image`; return { title, description: postData.description, openGraph: { title, description: postData.description, type: 'article', images: [{ url: image, width: 1200, height: 630, alt: `Preview artwork for ${postData.title}` }] }, twitter: { card: 'summary_large_image', title, description: postData.description, images: [image] } }; }
+export async function generateMetadata({ params }) { const { slug } = await params; const postData = await getPostBySlug(slug); const title = `${postData.title} | Blogs by Abhi`; const image = `/social-previews/${slug}.png`; return { title, description: postData.description, openGraph: { title, description: postData.description, type: 'article', images: [{ url: image, width: 1200, height: 630, alt: `Preview artwork for ${postData.title}` }] }, twitter: { card: 'summary_large_image', title, description: postData.description, images: [image] } }; }
 
 export default async function Post({ params }) {
   const { slug } = await params;
