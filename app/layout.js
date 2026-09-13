@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://blogs.abhijeetkakade.in"),
   title: "Blogs by Abhi",
   description: "Exploring ideas, code, and creativity.",
   manifest: "/manifest.webmanifest",
